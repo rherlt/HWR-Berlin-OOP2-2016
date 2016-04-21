@@ -11,7 +11,9 @@ import javax.swing.JTextField;
 
 public class MainFrame extends JFrame {
     
-    public MainFrame(String title) {
+    private static final long serialVersionUID = -979691148534081065L;
+
+	public MainFrame(String title) {
         super(title);
         
         // Set layout manager
