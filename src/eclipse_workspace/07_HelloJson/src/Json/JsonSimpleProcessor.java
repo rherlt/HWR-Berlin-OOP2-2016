@@ -43,7 +43,7 @@ public class JsonSimpleProcessor implements JsonProcessor {
 			root.put("date", dateFormat.format(new Date()));
 
 			JSONObject rates = new JSONObject();
-			rates.put("USD", exchangeRate.getRates().getUsd());
+			rates.put("usd", exchangeRate.getRates().getUsd());
 			root.put("rates", rates);
 
 			root.writeJSONString(bw);
@@ -71,7 +71,7 @@ public class JsonSimpleProcessor implements JsonProcessor {
 
 			exchangeRate.setBase((String) root.get("base"));
 			exchangeRate.setDate(dateFormat.parse((String) root.get("date")));
-			exchangeRate.getRates().setUsd((double) rates.get("USD"));
+			exchangeRate.getRates().setUsd((double) rates.get("usd"));
 
 		} catch (FileNotFoundException e) {
 			return new ExchangeRate();

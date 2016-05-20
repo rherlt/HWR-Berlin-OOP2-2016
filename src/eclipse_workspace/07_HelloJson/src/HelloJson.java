@@ -27,7 +27,7 @@ public class HelloJson {
 
 	private JTextField txtExchangerate;
 	private ExchangeRate exchangeRate;
-	//private JsonProcessing jsonProcessor = new OrgJson();
+	//private JsonProcessor jsonProcessor = new JsonSimpleProcessor();
 	private JsonProcessor jsonProcessor = new GoolgeGsonProcessor();
 	/**
 	 * Launch the application.
